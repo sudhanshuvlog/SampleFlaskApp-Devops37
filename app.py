@@ -1,16 +1,21 @@
-# app.py
+from flask import Flask
 
-from flask import Flask 
-from urllib.parse import quote 
 
 def create_app():
     app = Flask(__name__)
 
     @app.route('/')
     def home():
-        return 'Wow CI-CD Pipeline is been developed..'
+        print("inside home function")
+        return 'Hurray GFG - Sudhanshu!'
+
+    @app.route('/test')
+    def test():
+        return 'Hi Sudhanshu test'
 
     return app
+
+
 if __name__ == '__main__':
     app = create_app()
     app.run(host='0.0.0.0', port=80, debug=True)

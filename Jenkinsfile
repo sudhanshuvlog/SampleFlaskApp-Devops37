@@ -36,5 +36,10 @@ pipeline {
                 sh "docker run -dit --name webos -p 80:80 mywebimg"
         }
         }
+        stage("succesfull deployment"){ //job7
+            steps{
+                echo "Application Deployed Successfully"
+        }
+        }
     }
 }

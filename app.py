@@ -3,8 +3,8 @@ from flask import Flask
 
 def create_app():
     app = Flask(__name__)
-    x=10
-    y=x-10
+    x = 10
+    y = x-10
     print("inside create_app function")
 
     @app.route('/')
@@ -14,7 +14,7 @@ def create_app():
 
     @app.route('/test')
     def test():
-        return 'Hi Sudhanshu test'
+        return y
 
     return app
 

@@ -14,7 +14,7 @@ def create_app():
 
     @app.route('/test')
     def test():
-        return " 123"
+        return "test 123"
 
     return app
 

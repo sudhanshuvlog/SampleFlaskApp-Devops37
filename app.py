@@ -8,7 +8,6 @@ def create_app():
     @app.route('/')
     def home():
         print("inside home function")
-        test2()
         return 'Hurray Sudhanshu Updated1233333455555555!'
 
     @app.route('/test')

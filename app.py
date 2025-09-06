@@ -15,11 +15,19 @@ def create_app():
     def test():
         return "test 123456789"
 
+    @app.route('/test1')
+    def test():
+        return "test 123456789"
+    
+    @app.route('/test')
+    def test():
+        return "test 123456789"
+
     return app
 
 def test1():
     print("inside test1 function")
-    test(2)
+    test2()
 
 def test2():
     test1()

@@ -14,10 +14,10 @@ def create_app():
     def test():
         return "test 123456789"
     @app.route('/test2')
-    def test():
+    def test1():
         return "test 2"
     @app.route('/test3')
-    def test():
+    def test2():
         return "test 1"
 
     return app

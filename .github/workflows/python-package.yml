@@ -40,7 +40,7 @@ jobs:
         pytest --cov=app --cov-report=xml:coverage.xml
         cat coverage.xml
     - name: Upload coverage to artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: coverage-report
         path: coverage.xml
@@ -54,7 +54,7 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: "Download artifact"
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: coverage-report
       - name: "read coverage report"

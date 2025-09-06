@@ -1,6 +1,7 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY . .
+COPY app.py  .
+COPY requirements.txt .
 RUN groupadd -r appuser && \
     useradd -r -g appuser appuser && \
     pip install --no-cache-dir -r requirements.txt && \
